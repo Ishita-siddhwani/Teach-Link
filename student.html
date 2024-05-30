@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <style>
+    body {
+      background-color: rgba(173, 216, 230); /* Set background color */
+      font-family: Arial, sans-serif; /* Optional: Change font family */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+    }
+    
+    .container {
+      width: 300px; /* Set width of the container */
+      margin: 100px auto; /* Center the container */
+      background-color: #fff; /* Set background color of the container */
+      padding: 20px; /* Add some padding */
+      border-radius: 8px; /* Optional: Add border radius for a rounded appearance */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for depth */
+    }
+    
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"] {
+      width: 100%; /* Make input fields and button full width */
+      padding: 10px; /* Add padding */
+      margin-bottom: 10px; /* Add margin between elements */
+      border: 1px solid #ccc; /* Add border */
+      border-radius: 4px; /* Optional: Add border radius for a rounded appearance */
+      box-sizing: border-box; /* Ensure padding and border are included in the element's total width */
+    }
+    
+    input[type="submit"] {
+      background-color: #000; /* Set background color of the button */
+      color: white; /* Set text color of the button */
+      cursor: pointer; /* Change cursor to pointer on hover */
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049; /* Change background color on hover */
+    }
+  </style>
+</head>
+<body>
+<h1><center>Welcome to Faculty Login page</center></h1>
+    <div class="container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form action="Slogin">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="pwd" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

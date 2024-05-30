@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Faculty</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    form {
+      text-align: center;
+    }
+    
+    label {
+      display: inline-block;
+      width: 100px;
+      text-align: left;
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+      width: calc(100% - 120px); /* Adjust the width as needed */
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Add Faculty</h2>
+    <form action="addfaculty.jsp">
+  <label for="id">Id:</label>
+  <input type="text" id="id" name="id" required="required"><br>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br>
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address" required><br>
+  <label for="mobile">Mobile:</label>
+  <input type="text" id="mobile" name="mobile" required maxlength="10" pattern="[0-9]{10}" title="Please enter a 10-digit number"><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required="required"><br>
+  <label for="qual">Qualification:</label>
+  <input type="text" id="qual" name="qual" required="required"><br>
+  <label for="sub">Subjects:</label>
+  <input type="text" id="sub" name="sub" required="required"><br>
+  <label for="exp">Experience:</label>
+  <input type="text" id="exp" name="exp" required="required"><br>
+  <label for="pwd">Password:</label>
+  <input type="text" id="pwd" name="pwd" required="required"><br>
+  <input type="submit" value="Add Faculty">
+</form>
+
+  </div>
+</body>
+</html>

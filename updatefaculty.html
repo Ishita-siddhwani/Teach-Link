@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Faculty Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgba(173, 216, 230);
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    form {
+      text-align: center;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    input[type="email"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Update Faculty Information</h2>
+    <form action="updatefaculty">
+      <label for="id">Old Id</label>
+      <input type="text" id="id" name="id" required><br>
+      <label for="name">New Name</label>
+      <input type="text" id="name" name="name"><br>
+      <label for="address">New Address</label>
+      <input type="text" id="address" name="address"><br>
+      <label for="mobile">New Mobile</label>
+      <input type="number" id="mobile" name="mobile"><br>
+      <label for="email">New Email</label>
+      <input type="email" id="email" name="email"><br>
+      <label for="qualification">New Qualification</label>
+      <input type="text" id="qual" name="qual"><br>
+      <label for="sub">New Subjects</label>
+      <input type="text" id="sub" name="sub"><br>
+      <label for="exp">New Experience</label>
+      <input type="text" id="exp" name="exp"><br>
+      <input type="submit" value="Update Faculty">
+    </form>
+  </div>
+</body>
+</html>

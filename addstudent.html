@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color:  rgba(173, 216, 230);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"] {
+    width: calc(100% - 22px); /* Adjust for border and padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="number"]:focus {
+    border-color: #4CAF50;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    background-color: #000;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0000FF;
+  }
+
+  .error {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<form action="addstudent.jsp" method="post" onsubmit="return validateForm()">
+  <label for="roll">Roll</label>
+  <input type="text" id="roll" name="roll" required><br>
+
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="address">Address</label>
+  <input type="text" id="address" name="address" required><br>
+
+  <label for="mob">Mobile</label>
+  <input type="tel" id="mob" name="mob" pattern="[0-9]{10}" required><br>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="branch">Branch</label>
+  <input type="text" id="branch" name="branch" required><br>
+
+  <label for="year">Year</label>
+  <input type="text" id="year" name="year" required><br>
+
+  <label for="sem">Semester</label>
+  <input type="text" id="sem" name="sem" required><br>
+
+  <label for="pwd">Password</label>
+  <input type="password" id="pwd" name="pwd" minlength="8" required><br>
+
+  <input type="submit" value="Add Student">
+</form>
+
+<script>
+  function validateForm() {
+    var mobPattern = /^[0-9]{10}$/;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var password = document.getElementById("pwd").value;
+
+    if (!mobPattern.test(document.getElementById("mob").value)) {
+      alert("Please enter a valid mobile number.");
+      return false;
+    }
+
+    if (!emailPattern.test(document.getElementById("email").value)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    if (password.length < 8) {
+      alert("Password must be at least 8 characters long.");
+      return false;
+    }
+
+    return true;
+  }
+</script>
+</body>
+</html>
